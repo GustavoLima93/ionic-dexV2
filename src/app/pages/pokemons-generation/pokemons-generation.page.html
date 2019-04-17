@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<ion-content>
+    <ion-searchbar class="ajst"></ion-searchbar>
+    <ion-row>
+      <ion-col size="4" offset="6">
+        <ion-spinner *ngIf="!pokemons" name="crescent"></ion-spinner>
+      </ion-col>
+    </ion-row>
+    <ion-list>
+      <ion-virtual-scroll [items]="pokemons">
+        <app-pokemon *virtualItem="let pokemon" [pokemon]="pokemon"></app-pokemon>
+      </ion-virtual-scroll>
+    </ion-list>
+  </ion-content>
+  

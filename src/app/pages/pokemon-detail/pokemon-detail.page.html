@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>{{ pokemon?.nome }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="pokemon">
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col no-padding text-center>
+        <img [src]="pokemon?.img" alt="pokemon?.nome" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-header>
+    <ion-title>Descricao</ion-title>
+  </ion-header>
+  <ion-content>
+    {{ pokemon?.descricao }}
+  </ion-content>
+
+  <ion-title>Evolucoes</ion-title>
+
+  <ion-content>
+    <ion-row>
+      <ion-col *ngFor="let evo of pokemon.evolutions" size="4">
+        
+        
+      </ion-col>
+    </ion-row>
+  </ion-content> -->
+
+  <ion-grid>
+    <h3 margin text-center>Descricao</h3>
+    <ion-row>
+      <ion-col margin>
+        {{ pokemon?.descricao }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <h3 margin text-center>Ficha Tecnica</h3>
+    <ion-row>
+      <ion-col margin class="m-top-bot">
+        <ion-label>Peso : {{ pokemon?.peso }} </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col margin class="m-top-bot">
+        <ion-label>Altura : {{ pokemon?.altura }}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col margin class="m-top-bot">
+        <ion-label>Genero : {{ pokemon?.genero }}</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <h3 margin text-center>Habilidades</h3>
+    <ion-row *ngFor="let habilidade of pokemon.habilidades">
+      <ion-col margin class="m-top-bot">
+        <h5>Nome : {{ habilidade.nome}}</h5>
+        <p>Efeito : {{ habilidade.efeito }}</p>
+        <p>Descricao : {{ habilidade.descricao }}</p>
+      </ion-col>
+    </ion-row>    
+  </ion-grid>
+
+  <ion-grid>
+    <h3 margin text-center>Cadeia Evolutiva</h3>
+    <ion-row margin align-items-center>
+      <ion-col text-center *ngFor="let evo of pokemon.evolutions" size="4">
+        <img [src]="evo.img" />
+
+        <ion-label>{{ evo.pokemon }}</ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
