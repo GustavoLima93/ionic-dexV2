@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content *ngIf="pokemon">
-  
+
   <ion-grid no-padding>
     <ion-row>
       <ion-col no-padding text-center>
@@ -40,6 +40,15 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <ion-grid>
+      <h3 margin text-center>Power</h3>
+      <ion-row>
+        <ion-col size = '10' offset = '1'>
+          <app-power-pokemon [single]="pokemon?.status"></app-power-pokemon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
   <ion-grid>
     <h3 margin text-center>Ficha Tecnica</h3>
