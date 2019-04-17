@@ -4,20 +4,13 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
-import { MenuComponent } from './components/menu/menu.component';
-
-
 @NgModule({
-  declarations: [
-    MenuComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     IonicModule,
     RouterModule
   ],
-  exports: [
-    MenuComponent
-  ]
+  exports: []
 })
 export class SharedModule { }

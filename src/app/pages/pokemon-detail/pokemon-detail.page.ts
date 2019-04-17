@@ -34,7 +34,7 @@ export class PokemonDetailPage implements OnInit {
       }
       this.pokedexService.byId(paramMap.get('id')).subscribe((pokemon: Pokemon[]) => {
         this.pokemon = pokemon[0];
-        console.log(this.pokemon)
+        console.log(this.pokemon);
       });
     });
   }
