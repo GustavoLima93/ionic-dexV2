@@ -1,9 +1,12 @@
 <ion-item [routerLink]="['details', pokemon.numeroDex]"
-routerLinkActive="router-link-active">
+routerLinkActive="router-link-active"
+class="m-1 shadow"
+lines="none"
+>
   <ion-avatar slot="start">
     <ion-img [src]="pokemon.img"></ion-img>
   </ion-avatar>
-  <ion-label>#{{ pokemon.numeroDex }} {{ pokemon.nome }}</ion-label>
+  <ion-label >#{{ pokemon.numeroDex }} {{ pokemon.nome }}</ion-label>
   <ion-badge
     *ngFor="let type of pokemon.tipo"
     slot="end"

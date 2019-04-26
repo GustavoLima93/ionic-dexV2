@@ -2,14 +2,23 @@ import { Injectable } from '@angular/core';
 
 import { AngularFireDatabase } from '@angular/fire/database';
 
+import { BehaviorSubject, Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
 export class PokedexService {
 
+  private rota: BehaviorSubject<string> = new BehaviorSubject('0');
+  public activetedRoute: Observable<any> = this.rota.asObservable();
+
   constructor(
     private db: AngularFireDatabase
   ) { }
+
+  setRota(rota: string) {
+    return this.rota.next(rota);
+  }
 
   allPokemons() {
     return this.db.list('/pokemons').valueChanges();

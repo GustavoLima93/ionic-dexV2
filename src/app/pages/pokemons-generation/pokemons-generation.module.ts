@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 
+import { FilterPipeModule } from 'ngx-filter-pipe';
+
 import { PokemonsGenerationPage } from './pokemons-generation.page';
 import { PokemonComponent } from './pokemon/pokemon.component';
 
@@ -22,6 +24,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     SharedModule,
+    FilterPipeModule,
     RouterModule.forChild(routes)
   ],
   declarations: [

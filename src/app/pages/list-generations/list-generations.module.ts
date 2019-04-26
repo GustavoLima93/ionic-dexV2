@@ -3,18 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
-import { NgxChartsModule } from '@swimlane/ngx-charts';
-
 import { IonicModule } from '@ionic/angular';
 
-import { PokemonDetailPage } from './pokemon-detail.page';
-import { PowerPokemonComponent } from './components/power-pokemon/power-pokemon.component';
-
+import { ListGenerationsPage } from './list-generations.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: PokemonDetailPage
+    component: ListGenerationsPage
   }
 ];
 
@@ -23,12 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    NgxChartsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [
-    PokemonDetailPage,
-    PowerPokemonComponent
-  ]
+  declarations: [ListGenerationsPage]
 })
-export class PokemonDetailPageModule {}
+export class ListGenerationsPageModule {}

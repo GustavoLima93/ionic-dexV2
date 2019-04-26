@@ -14,6 +14,8 @@ export class PokemonsGenerationPage implements OnInit {
 
   public pokemons: Pokemon[];
 
+  userFilter: any = { name: '' };
+
   constructor(
     private pokedexService: PokedexService,
     private activatedRoute: ActivatedRoute,
@@ -29,6 +31,7 @@ export class PokemonsGenerationPage implements OnInit {
       if (!id.has('id')) {
         return this.router.navigate(['/pokedex']);
       }
+      this.pokedexService.setRota(id.get('id'));
       this.pokedexService.getByGeneration(id.get('id')).subscribe((pokemons: Pokemon[]) => {
         this.pokemons = pokemons;
       });

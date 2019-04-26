@@ -1,1 +1,46 @@
-
+<ion-header class="mb-4">
+  <ion-toolbar class="shadow">
+    <ion-title>Ionic-Dex</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="card" class="ml-3 mr-3 b-2">
+    <div class="card-body">      
+      <p class="card-text text-justify">
+        Meu nome é Gustavo Henrique de lima Oliveira. Sou desenvolvedor, e
+        atualmente estou focado em javascript e desde o final de 2017 estou
+        estudando muito Angular s2. Esse app foi desenvolvido com Ionic/Angular
+        e Firebase utilizando suas boas praticas. Caso queira me seguir nas
+        minhas Redes-Sociais basta clicar nos links abaixo :
+      </p>
+      <ion-grid>
+        <ion-row margin align-items-center>
+          <ion-col text-center size="4">
+            <ion-label><a href="https://www.linkedin.com/in/gustavo-henrique-de-lima-oliveira-79532b172/" target="_blank"><ion-icon size="large" name="logo-linkedin"></ion-icon></a></ion-label>
+          </ion-col>
+          <ion-col text-center size="4">
+            <ion-label><a href="https://github.com/GustavoLima93" target="_blank" ><ion-icon size="large" name="logo-github"></ion-icon></a></ion-label>
+          </ion-col>
+          <ion-col text-center size="4">
+            <ion-label><a href="https://www.facebook.com/gustavo.oliveira93?ref=bookmarks" target="_blank"><ion-icon size="large" name="logo-facebook"></ion-icon></a></ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <h5 class="card-title">LEIA</h5>
+      <p class="card-text text-justify">
+        Ionic-Dex é um aplicativo não oficial, feito para que seja usado de
+        portfolio, onde foi desenvolvido estudando as boas práticas de
+        programação do framework Ionic com Angular, é gratuito e NÃO é filiado,
+        endossado ou suportado por Nintendo, GAME FREAK ou a empresa The Pokémon
+        de qualquer forma. Algumas imagens usadas neste aplicativo são
+        protegidas por direitos autorais e são suportadas por uso justo. Os
+        nomes dos personagens Pokémon e Pokémon são marcas comerciais da
+        Nintendo. Não há intenção de infringir direitos de autoria. e aplicativo
+        são protegidas por direitos autorais e são suportadas por uso justo. Os
+        nomes dos personagens Pokémon e Pokémon são marcas comerciais da
+        Nintendo. Não há intenção de infringir direitos de autoria.
+      </p>
+      <a [routerLink]="['list']" routerLinkActive="router-link-active"  class="btn btn-primary text-center">Lista Geracoes</a>
+    </div>
+  </div>
+</ion-content>

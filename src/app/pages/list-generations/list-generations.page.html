@@ -1,0 +1,23 @@
+<ion-header class="mb-4">
+  <ion-toolbar class="shadow">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="pokedex"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Lista de Geracoes</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item
+      [routerLink]="['/pokedex/list', generation.number]"
+      routerLinkActive="router-link-active"
+      class="m-1 shadow"
+      lines="none"
+      *ngFor="let generation of generations"
+    >
+      <ion-label class="text-center"
+        >Geracao {{ generation.number }} {{ generation.year }}</ion-label
+      >
+    </ion-item>
+  </ion-list>
+</ion-content>

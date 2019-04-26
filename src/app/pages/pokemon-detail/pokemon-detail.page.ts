@@ -16,6 +16,7 @@ import { PokedexService } from 'src/app/services/pokedex.service';
 export class PokemonDetailPage implements OnInit {
 
   public pokemon: Pokemon;
+  public return: string;
 
   constructor(
     private pokedexService: PokedexService,
@@ -32,11 +33,15 @@ export class PokemonDetailPage implements OnInit {
       if (!paramMap.has('id')) {
         return this.router.navigate(['/pokedex']);
       }
+      this.pokedexService.activetedRoute.subscribe(param => this.return = param);
       this.pokedexService.byId(paramMap.get('id')).subscribe((pokemon: Pokemon[]) => {
         this.pokemon = pokemon[0];
-        console.log(this.pokemon);
       });
     });
+  }
+
+  returnPage() {
+    this.router.navigate(['/pokedex/list', this.return]);
   }
 
 }
